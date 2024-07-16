@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* sub_bg포지션 때문에 걸어줌 */
+}
+
+
+
+/* header 영역 */
+#header{
+    height: 100px;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{}
+
+.nav{
+    align-self: self-end;
+    margin-right: 20px;
+}
+
+.main{}
+
+.main > li{
+    display: inline-block;
+    position: relative;
+}
+
+.main > li > a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    background-color: white;
+    color: rgba(34, 56, 0);
+    font-size: 16px;
+}
+
+.main > li:hover > a{
+    border-bottom: 8px double rgba(34, 56, 0, 0.7);
+}
+
+.sub{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: 10;
+}
+
+.sub li{}
+
+.sub li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /* background-color: rgba(34, 56, 0); */
+    color: white;
+    font-size: 12px;
+}
+
+.sub li:hover a{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
+}
+
+.sub_bg{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background-color: rgba(34, 56, 0, 0.7);
+    z-index: 1;
+}
+
+
+/* section 영역 */
+#section{
+    height: 500px;
+    /* background-color: gold; */
+}
+
+.slide_img{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.left_move{
+    width: calc(1200px * 3);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.left_move li{
+    float: left;
+}
+
+/* contents 영역 */
+.contents{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents > div{
+    height: 200px;
+    width: 390px;
+    /* background-color: gray; */
+}
+
+.contents h3{
+    width: 100px;
+    height: 35px;
+    background-color: rgba(34, 56, 0);
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px 10px 0 0 ;
+    margin-left: 20px;
+}
+
+.contents ul, .contents p{
+    width: 100%;
+    height: 165px;
+    border-top: 2px solid rgba(34, 56, 0);
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* color: #b9b9b9; */
+    border-radius: 10px;
+}
+
+.notice{}
+.notice ul{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.notice ul li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice ul li a{
+    width: 75%;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.notice ul li span{
+
+}
+
+.gallery{}
+
+.gallery ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gallery ul li{
+
+}
+
+.banner{}
+.banner p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* footer영역 */
+#footer{
+    height: 100px;
+    /* background-color: palevioletred; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted rgba(34, 56, 0, 0.5)
+}
+
+.f_logo{}
+
+.copy{
+    border-left: 1px dotted rgba(34, 56, 0, 0.5);
+    border-right: 1px dotted rgba(34, 56, 0, 0.5);
+    width: 600px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.family{}
+.family select{height: 30px;}
+
+
+.modal{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.popup{
+    width: 300px;
+    height: 400px;
+    background-color: rgb(255, 255, 255, 0.8);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 20px solid rgba(34, 56, 0);
+    color: rgba(34, 56, 0);
+}
+
+.popup h3{
+    text-align: center;
+    line-height: 2;
+    border-bottom: 5px double rgba(34, 56, 0);
+    font-size: 20px;
+}
+
+.popup p{
+    padding-top: 20px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.close{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    background-color: rgba(34, 56, 0);
+    color: white;
+    padding: 10px;
+}
